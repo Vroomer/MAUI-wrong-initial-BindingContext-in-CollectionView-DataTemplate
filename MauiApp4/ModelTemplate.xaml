@@ -4,7 +4,7 @@
       xmlns:local="clr-namespace:MauiApp4"
       x:Class="MauiApp4.ModelTemplate"
       x:DataType="local:Model"
-      ColumnDefinitions="100, 100, 100">
+      ColumnDefinitions="100, 200, 150">
     <Label Text="{Binding Name}" />
     <Label Grid.Column="1"
            Text="{Binding Description}" />

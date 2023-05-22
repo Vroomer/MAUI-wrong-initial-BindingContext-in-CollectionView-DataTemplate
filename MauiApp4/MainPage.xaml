@@ -11,11 +11,23 @@
             </DataTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
-    <Grid RowDefinitions="Auto, *">
+
+    <Grid RowDefinitions="Auto, Auto, *">
 
         <Button Command="{Binding AddItemsCommand}"
                 Text="Add more items" />
+
+        <Grid Grid.Row="1"
+              ColumnDefinitions="100, 200, 150">
+            <Label Text="Name"
+                   FontAttributes="Bold" />
+            <Label Grid.Column="1"
+                   Text="Description"
+                   FontAttributes="Bold" />
+            <Label Grid.Column="2"
+                   Text="BindingContext"
+                   FontAttributes="Bold" />
+        </Grid>
 
         <!--<CollectionView Grid.Row="1"
                         ItemsSource="{Binding Items}">
@@ -30,8 +42,8 @@
             </CollectionView.ItemTemplate>
         </CollectionView>-->
 
-        <CollectionView Grid.Row="1"
-                        WidthRequest="600"
+        <CollectionView Grid.Row="2"
+                        HorizontalOptions="Start"
                         ItemsSource="{Binding Items}"
                         ItemTemplate="{StaticResource modelTemplate}" />
 

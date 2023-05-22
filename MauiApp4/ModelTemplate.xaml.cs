@@ -20,17 +20,17 @@ public partial class ModelTemplate : Grid
         if (BindingContext is Model)
         {
             bindingContextLabel.Text = "Model";
-            Debug.WriteLine(bindingContextLabel.Text);
+            Debug.WriteLine($"current BindingContext: {bindingContextLabel.Text}");
         }
         else if (BindingContext is MainPageViewModel)
         {
             bindingContextLabel.Text = "MainPageViewModel";
-            Debug.WriteLine(bindingContextLabel.Text);
+            Debug.WriteLine($"current BindingContext: {bindingContextLabel.Text}");
         }
         else
         {
             bindingContextLabel.Text = "not recognized";
-            Debug.WriteLine(bindingContextLabel.Text);
+            Debug.WriteLine($"current BindingContext: {bindingContextLabel.Text}");
         }
     }
 }
