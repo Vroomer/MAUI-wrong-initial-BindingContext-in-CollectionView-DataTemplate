@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp4"
+             x:Class="MauiApp4.MainPage"
+             x:DataType="local:MainPageViewModel">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="modelTemplate">
+                <local:ModelTemplate />
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid RowDefinitions="Auto, *">
+
+        <Button Command="{Binding AddItemsCommand}"
+                Text="Add more items" />
+
+        <!--<CollectionView Grid.Row="1"
+                        ItemsSource="{Binding Items}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="local:Model">
+                    <Grid ColumnDefinitions="100, 100">
+                        <Label Text="{Binding Name}" />
+                        <Label Grid.Column="1"
+                               Text="{Binding Description}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>-->
+
+        <CollectionView Grid.Row="1"
+                        WidthRequest="600"
+                        ItemsSource="{Binding Items}"
+                        ItemTemplate="{StaticResource modelTemplate}" />
+
+    </Grid>
+</ContentPage>

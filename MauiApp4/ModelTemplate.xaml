@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      xmlns:local="clr-namespace:MauiApp4"
+      x:Class="MauiApp4.ModelTemplate"
+      x:DataType="local:Model"
+      ColumnDefinitions="100, 100, 100">
+    <Label Text="{Binding Name}" />
+    <Label Grid.Column="1"
+           Text="{Binding Description}" />
+    <Label Grid.Column="2"
+           x:Name="bindingContextLabel" />
+</Grid>
